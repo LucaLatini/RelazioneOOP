@@ -81,42 +81,40 @@ ma senza perderne le ispirazioni principali.
 
 \subsection{Legenda termini specifici e alternativi}
 \begin{itemize}
-	\item Morte del personaggio: Il personaggio principale ha fallito il suo obiettivo di arrivare alla fine del livello, dovrà ricominciare 
-	o dal punto di rinascità di default o, pagando monete di gioco, dal punto in cui è avvenuto l'evento che ha determinato il fallimento del livello.
+	\item Morte del personaggio: Il personaggio principale fallisce l'obiettivo di completare il livello e deve ricominciare dal punto di rinascita di default oppure, spendendo monete di gioco, dal punto in cui si è verificato l'evento che ha causato il fallimento.
 	\item Protagonista: Personaggio principale.
 	\item Personaggio: Personaggio principale.
 \end{itemize}
 
 \subsection{Entità }
-E' una qualsiasi entità del mondo di gioco, è in grado di fornire la propria posizione. Rappresenta la base comune di tutte le entità presenti nella mappa.
+Qualsiasi elemento presente nel mondo di gioco. Un'entità è in grado di fornire la propria posizione e rappresenta la base comune a tutti gli oggetti collocati nella mappa.
 
 \subsection{Personaggio Principale}
-L'entità personaggio è l'unico oggetto controllabile e dinamico, funge da interfaccia diretta tra l'utente e l'ambiente di gioco.
-In esso sono definiti attributi per la gestione della fisica e geometria, che ne influenzano l'interazione con gli altri elementi di gioco.
-Interagisce con l'input utente, gestendo la dinamica del salto eseguendolo,se possibile, quando richiesto.
-Il personaggio può collezionare monete all'interno del livello, interagire con entità che ne modificano lo stato, scontrarsi con ostacoli o arrivare alla fine della mappa determinando la vittoria del livello.
+Il personaggio è l'unico elemento controllabile e dinamico del gioco, costituisce l'interfaccia diretta tra utente e ambiente.
+Possiede attributi relativi alla fisica e alla geometria che determinano la modalità di interazione con gli altri elementi.
+Reagisce agli input dell'utente gestendo la meccanica del salto, che viene eseguito quando richiesto e se le condizioni lo permettono.
+Durante il livello il personaggio può raccogliere monete, interagire con entità che ne alterano lo stato, urtare ostacoli oppure raggiungere il traguardo completando con successo il livello.
 %
 \subsection{Ostacoli}
-L'entità ostacolo è un oggetto statico, inamovibile.L'insieme di ostacoli e power up compone il mondo di gioco.
-Ogni ostacolo fornisce: la sua posizione nel livello, informazioni riguardanti la propria geometria e su come il gioco deve reagire in caso di un contatto con il giocatore. 
-Il livello è composto da ostacoli di diversi tipi, ogni ostacolo può comportare ,se urtato in un certo modo, la morte del personaggio principale.
+Un ostacolo è un oggetto statico e inamovibile. Gli ostacoli, insieme ai power up, costituiscono il mondo di gioco.
+Ogni ostacolo fornisce la propria posizione, le informazioni geometriche e le regole di interazione in caso di contatto con il giocatore.
+Il livello contiene ostacoli di varie tipologie, ciascuno dei quali può causare la morte del personaggio se urtato in un determinato modo.
 %
 \subsubsection{Spike}
-Un oggetto di forma triangolare che se colpito in qualunque modo, comporta la morte del protagonista.
+Ostacolo di forma triangolare che provoca la morte del protagonista in caso di contatto, indipendentemente dalla direzione dell'urto.
 %
 \subsubsection{Box}
-L'oggetto standard, di forma quadrata, su cui il personaggio può salire e muoversi. Se colpito lateralmente provoca la morte del giocatore.
+Ostacolo standard di forma quadrata. Il personaggio può salirvi sopra e camminarci. Un urto laterale causa il fallimento del livello.
 %
 \subsection{PowerUp}
-L'entità powerup è un oggetto statico, che in caso di contatto con il player può comportare modifiche allo stato del protagonista, alla logica o alla sessione di gioco.
-Fornisce informazioni sulla posizione, geometria e logica di collisione con il player.
+Un power up è un oggetto statico che, al contatto con il personaggio, può modificarne lo stato oppure alterare la logica di gioco o la sessione corrente.
+Fornisce informazioni su posizione, geometria e comportamento in caso di collisione con il giocatore.
 %
 \subsubsection{Moneta}
-Una moneta è un power up che in caso di collisione col player viene collezionato come valuta di gioco.
+Power up che viene raccolto come valuta di gioco quando il personaggio vi entra in contatto.
 %
 \subsection{Livello}
-Il livello è l'insieme degli Ostacoli e del personaggio. Contiene informazioni sulla posizione e sulla disposizione spaziale delle varie entità nel mondo di gioco.
-
+Il livello costituisce l'ambiente di gioco vero e proprio. Esso è costituito dall'insieme degli ostacoli, dei power up e del personaggio. Contiene le informazioni relative alla posizione e alla disposizione spaziale di tutte le entità nel mondo di gioco.
 
 \includegraphics[width=\textwidth]{img/analisiUml.png}
 
